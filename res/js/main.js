@@ -1,3 +1,7 @@
+import { Champ } from "./champs/Champ.js";
+import { Background } from "./ui/basic-ui.js";
+
+const background = new Background();
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -35,8 +39,7 @@ const resizeCanvas = () => {
 }
 
 const clearCanvas = () => {
-    ctx.fillStyle = "white";
-    ctx.fillRect(0, 0, 1280, 720);  
+    background.draw(ctx);
 }
 
 const update = () => {
