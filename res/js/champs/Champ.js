@@ -83,6 +83,8 @@ export class Champ {
     draw(ctx) {
         ctx.drawImage(this.img, this.position.x, this.position.y, this.size.width, this.size.height);
         ctx.save(); //uloží součastný stav štětce
+        ctx.fillStyle = "black";
+        ctx.fillRect(this.position.x, this.position.y - 15, this.size.width, 10);
         ctx.fillStyle = "red";
         ctx.fillRect(this.position.x, this.position.y - 15, this.size.width * (this.hp/this.maxHP), 10);
         ctx.lineWidth = 4;

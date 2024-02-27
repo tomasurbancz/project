@@ -7,8 +7,8 @@
 
 html, body {
     overflow: hidden;
-    cursor: none;
     margin: 0;
+    cursor: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -24,4 +24,5 @@ html, body {
     object-fit: contain;
     max-width: 100%;
     max-height: 100%;
+    cursor: url("./res/img/cursor/cursor.png"), auto;
 }

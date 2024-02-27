@@ -24,7 +24,7 @@ function changeChamp() {
     if(champ === null) champ = new Champ("Caitlyn", 100, 5, 100, 1, 1, 2, "white");
     else if(champ.name === "Caitlyn") champ = new Champ("Ezreal", 150, 10, 100, 1.25, 2, 2.5, "yellow");
     else if(champ.name === "Ezreal") champ = new Champ("Jinx", 200, 15, 100, 1.5, 3, 3, "pink");
-    else if(champ.name === "Jinx") champ = new Champ("Vayne", 400, 30, 100, 3, 4, 6, "grey");
+    else if(champ.name === "Jinx") champ = new Champ("Vayne", 400, 30, 100, 1.75, 4, 6, "white");
     else {
         gaming = false;
         waiting = false;
@@ -105,15 +105,16 @@ const getFPS = () => {
 window.addEventListener("mousemove", (e) => {
     if(!gaming && waiting) {
         if(e.x >= 750 && e.x <= 1160 && e.y >= 670 && e.y <= 725) {
-            canvas.style.cursor = 'pointer';
-        } else canvas.style.cursor = 'default';
-    } else canvas.style.cursor = 'default';
+            canvas.style.cursor = 'url("./res/img/cursor/cursorblue.png"), auto';
+        } else canvas.style.cursor = 'url("./res/img/cursor/cursor.png"), auto';
+    } 
 })
 
 window.addEventListener("click", (e) => {
     if(!gaming && waiting) {
         if(e.x >= 750 && e.x <= 1160 && e.y >= 670 && e.y <= 725) {
             gaming = true;
+            canvas.style.cursor = 'url("./res/img/cursor/cursor.png"), auto'
         }
     }
 })
